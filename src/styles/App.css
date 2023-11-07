@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Rubik:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0e1323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (7, 1fr);
+    padding: 2rem 0;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  body {
+    align-items: flex-start;
+  }
+}

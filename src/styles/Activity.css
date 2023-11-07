@@ -1,0 +1,74 @@
+.Activity {
+  background-repeat: no-repeat;
+  background-position: 90% 2%;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 20px;
+}
+
+.activity-info {
+  border-radius: 20px;
+  background-color: #1c204b;
+  display: grid;
+  grid-template-columns: 70% auto;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  height: 85%;
+  width: 100%;
+}
+
+.activity-info:hover {
+  background-color: #33397a;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.activity-title {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.activity-previous {
+  color: #bbc0ff;
+  font-weight: 400;
+}
+
+.activity-time {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.ellipsis {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  padding: 0.5rem;
+  justify-self: end;
+}
+
+.ellipsis:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .activity-info {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .activity-time {
+    font-size: 2rem;
+  }
+
+  .activity-previous {
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+    justify-self: end;
+    align-self: center;
+    text-align: right;
+  }
+}

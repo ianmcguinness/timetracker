@@ -1,0 +1,102 @@
+.Name {
+  border-radius: 40px;
+  grid-row: 1 / -1;
+  background-color: #1c204b;
+}
+
+.name-card {
+  background-color: #5747ea;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 2fr;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 20px;
+  height: 65%;
+}
+
+.img-box {
+  height: 10rem;
+  width: 10rem;
+}
+
+.name-card img {
+  border: 3px solid white;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.name-card h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.name-card h3 {
+  color: #bbc0ff;
+  font-weight: 400;
+  align-self: center;
+}
+
+.timeframes {
+  background-color: #1c204b;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border-radius: 20px;
+}
+
+.timeframes h3 {
+  color: #7078c9;
+  font-weight: 400;
+}
+
+.timeframes h3.active {
+  color: white;
+}
+
+.timeframes h3:hover {
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .name-card {
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .img-box {
+    grid-row: 1 / -1;
+    align-self: center;
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .name-card h3 {
+    align-self: end;
+  }
+
+  .timeframes {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+}
+
+@media (max-width: 485px) {
+  img-box {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .name-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .timeframes {
+    padding: 1.5rem;
+  }
+}
